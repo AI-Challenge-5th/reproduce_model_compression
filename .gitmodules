@@ -1,0 +1,6 @@
+[submodule "yolor"]
+	path = yolor
+	url = https://github.com/AI-Challenge-5th/yolor.git
+[submodule "model_compression_inference"]
+	path = model_compression_inference
+	url = https://github.com/AI-Challenge-5th/model_compression_inference.git
