@@ -6,3 +6,4 @@ git clone --recursive https://github.com/AI-Challenge-5th/reproduce_model_compre
 ```python
 
 ```
+see info.txt
