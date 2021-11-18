@@ -40,7 +40,7 @@ ARG DISABLE_CACHE=None
 # ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ #
 
 ### 사용자 공간
-RUN apt-get update && pip install -U scikit-image && pip install -U cython && pip install --upgrade pip && git clone https://github.com/ultralytics/yolov5 /home/agc2021/model_compression_inference/yolov5
+RUN apt-get update && pip install -U scikit-image && pip install -U cython && pip install --upgrade pip && git clone https://github.com/ultralytics/yolov5 /home/agc2021/model_compression_inference/yolov5 && pip install torch==1.10.0+cu111 torchvision==0.11.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html && apt install -y zip htop screen libgl1-mesa-glx
 
 ### ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ ###
 # Do not modify the code below.               
