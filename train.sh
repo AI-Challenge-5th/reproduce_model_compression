@@ -7,6 +7,7 @@ python -m torch.distributed.launch --nproc_per_node 8 --master_port 9527 train.p
 
 cp runs/train/yolor_p6-tune/weights/best.pt yolor_p6.pt
 
-python prune.py
+python prune.py --prune 0.20
 
 cp yolor_p6_pr20.pt ../model_compression_inference/agc2021.pt
+
