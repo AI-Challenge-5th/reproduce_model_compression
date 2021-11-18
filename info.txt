@@ -1,3 +1,22 @@
+README
+    - 해당 학습코드는 docker container에서 진행됨.
+    
+    - docker version : 20.10.2
+    
+    - 소스코드에 첨부된 Dockerfile를 빌드하여 학습해야 됨.
+        - cd reproduce_model_compression
+        - docker build . -t agc2021
+        * docker build 시 reproduce_model_compression은 container 안에서 /home/agc2021 에 위치함
+    - yolov5 coco dataset 다운로드 필수
+        - coco/images/train2017
+        - coco/labels/train2017
+        - coco/train2017.txt
+        
+    - docker run 방법
+        (예시) docker --gpus=all -it --name= yolor_reproduce agc2021 sleep infinity
+    
+    - 최종 학습 완료된 weight 명은 agc2021.pt
+    
 2.1
     학습 실행코드명
         - bash train.sh
@@ -70,9 +89,18 @@
     NVIDIA A100 8개
 
 2.4 
-    사용한 패키지들의 종류와 버전이 담긴 requirements.txt
-    reproduce_model_compression/model_compression_inference/requirements.txt
+    requirements.txt 전에 세팅
+        apt-get update
+        pip install -U scikit-image 
+        pip install -U cython 
+        pip install --upgrade pip
+        pip install torch==1.10.0+cu111 torchvision==0.11.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+        apt install -y zip htop screen libgl1-mesa-glx
+    
+    사용한 패키지들의 종류와 버전이 담긴 requirements.txt 경로
+        reproduce_model_compression/model_compression_inference/requirements.txt
 
 2.5
-    reproduce_model_compression/coco/images/train2017
+    reproduce_model_compression/coco/images/train2017 
     reproduce_model_compression/coco/labels/train2017
+    reproduce_model_compression/coco/train2017.txt 
