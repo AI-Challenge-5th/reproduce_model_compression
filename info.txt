@@ -6,6 +6,7 @@ README
     - 소스코드에 첨부된 Dockerfile를 빌드하여 학습해야 됨.
         - cd reproduce_model_compression
         - docker build . -t agc2021
+        - build_docker.sh 
         * docker build 시 reproduce_model_compression은 container 안에서 /home/agc2021 에 위치함
     - yolov5 coco dataset 다운로드 필수
         - coco/images/train2017
