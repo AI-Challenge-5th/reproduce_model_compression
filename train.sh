@@ -10,5 +10,5 @@ cp runs/train/yolor_p6-fine/weights/best.pt yolor_p6.pt
 python prune.py --prune 0.05
 
 cp yolor_p6_pr5.pt agc2021.pt
-cp agc2021 ../model_compression_inference/agc2021.pt
+cp agc2021.pt ../model_compression_inference/agc2021.pt
 
